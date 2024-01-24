@@ -42,7 +42,8 @@ async function detectFaces() {
     const canvas = document.getElementById("canvas")
 
     let fullFaceDescriptions = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors().withFaceExpressions()
-
+    console.log(fullFaceDescriptions)
+    
     if (fullFaceDescriptions.length > 0) {
         const expressions = fullFaceDescriptions[0].expressions
         const divExpressions = document.querySelector("div.expressions-list")
@@ -57,9 +58,9 @@ async function detectFaces() {
             }
         }
 
-        faceapi.draw.drawDetections(canvas, fullFaceDescriptions);
-        faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions);
-        faceapi.draw.drawFaceExpressions(canvas, fullFaceDescriptions, 0.05);
+        // faceapi.draw.drawDetections(canvas, fullFaceDescriptions);
+        // faceapi.draw.drawFaceLandmarks(canvas, fullFaceDescriptions);
+        // faceapi.draw.drawFaceExpressions(canvas, fullFaceDescriptions, 0.05);
     
     } else {
         console.error("⛔️ A face was not detected.")
