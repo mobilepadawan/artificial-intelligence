@@ -33,8 +33,6 @@ buttonUpload.addEventListener("click", async ()=> {
             }, 2500)
         }
     })
-
-
 })
 
 async function detectFaces() {
@@ -43,7 +41,7 @@ async function detectFaces() {
 
     let fullFaceDescriptions = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors().withFaceExpressions()
     console.log(fullFaceDescriptions)
-    
+
     if (fullFaceDescriptions.length > 0) {
         const expressions = fullFaceDescriptions[0].expressions
         const divExpressions = document.querySelector("div.expressions-list")
