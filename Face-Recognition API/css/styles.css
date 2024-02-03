@@ -149,8 +149,12 @@ button:disabled {
     filter: brightness(.3);
 }
 
-#canvas {
+video {
     position: absolute;
+}
+
+#canvas {
+    position: relative;
     top: 0;
     left: 0;
     z-index: 20;

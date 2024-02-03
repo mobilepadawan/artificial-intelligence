@@ -1,6 +1,6 @@
 import { URLMODEL, trainingModel } from "./model.photo.js"
 
-trainingModel()
+trainingModel(URLMODEL)
 
 const buttonUpload = document.querySelector("button#buttonUpload")
 const buttonCapture = document.querySelector("button#buttonCapture")
@@ -28,9 +28,7 @@ buttonUpload.addEventListener("click", async ()=> {
             canvas.style.height = "auto"
             canvas.id = "canvas"
             imageContainer.append(canvas)
-            setTimeout(() => {
-                detectFaces()
-            }, 2500)
+            setTimeout(detectFaces, 2500)
         }
     })
 })
