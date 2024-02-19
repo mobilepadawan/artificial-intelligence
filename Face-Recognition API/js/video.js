@@ -1,5 +1,3 @@
-
-
 const video = document.querySelector("video#webcam-video")
 const canvas = document.querySelector("canvas#canvas")
 
