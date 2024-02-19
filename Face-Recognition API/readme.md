@@ -10,8 +10,8 @@ I used Vanilla JS to code the logic. Also the **face-api** library and some trai
 
 ## Future updates
 
-[ ] Take a picture using a mobile phone and analyse it almost in real time.
+- [ ] Take a picture using a mobile phone and analyse it almost in real time.
 
-[ ] Streaming video from a webcam and realtime analyzing faces in the footage.
+- [ ] Streaming video from a webcam and realtime analyzing faces in the footage.
 
 After finish the mentioned tests this webapp will turn to a HR application where companies can automatically register the in and out of its employees.
