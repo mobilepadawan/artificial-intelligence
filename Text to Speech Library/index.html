@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Text to Speech Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/voice-64.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Speakit-beta.v1.0.0.min.js"></script>
+    <script defer src="js/speech-synthesis.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1>Text to Speech Library</h1>
+            <img src="images/voice-64.png" alt="Text to Speech" >
+        </div>
+    </header>
+    <main>
+        <section>
+            <select id="language-select">
+                <option value="">Pick a language</option>
+            </select>
+            <textarea placeholder="Add or paste a text or sentence." id="text-input" class="text-area text-blue bg-lightgray"></textarea>
+            <button id="read-button" title="Speak the text added in the textarea.">Read</button>
+            <button id="pause-button" title="Pause or Resume the current speaking">Pause</button>
+            <button id="cancel-button" title="Cancel the speaking of the text">Stop</button>
+        </section>
+    </main>
+</body>
+</html>
