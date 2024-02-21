@@ -14,7 +14,7 @@ const recognition = new speechRecognition
             p = document.createElement('p')
         }
 
-        if (text.includes('borra la pantalla')) {
+        if (text.toLowerCase().includes('borra la pantalla') || text.toLowerCase().includes('clear screen')) {
             setTimeout(() => textArea.innerText = "", 500);
           }
       })
