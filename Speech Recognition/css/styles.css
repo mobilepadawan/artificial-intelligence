@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css');
+
+html {
+    color-scheme: dark;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+
+    & h1 {
+        margin: 0;
+    }
+
+    & img {
+        margin: 0;
+    }
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    max-width: 760px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text-area {
+    text-align: center;
+}
+
+.traduction-area {
+    font-style: normal;
+    font-size: 2rem;
+}
