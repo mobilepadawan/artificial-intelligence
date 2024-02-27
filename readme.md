@@ -12,4 +12,4 @@ This webapp uses a JS library built by me to take a text written by you or paste
 
 This webappp uses the native Voice recognition API to use the microphone of your webapp to listen to the user talk. the webapp will transcript in realtime all the audio listened by the microphone and show on the HTML document the transcripted text.
 
-It is very easy to use. It is not a JS Library, it is a native voice recognition API.
+A software tool very easy to use. It's not a JS Library just a native voice recognition API.
