@@ -51,7 +51,7 @@
     width: 60%;
     max-width: 390px;
     margin: 14px;
-    border-radius: 15px;
+    border-radius: 8px;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -59,6 +59,12 @@
 .message-left {
     background-color: #555;
     color: white;
+}
+
+.message-hour {
+    margin-top: 10px;
+    color: white;
+    font-size: 9px;
 }
 
 .message-right {
@@ -88,6 +94,10 @@
     color: white;
 }
 
+.footer input[type="text"]:disabled {
+    opacity: 0.5;
+}
+
 .footer button {
     background-color: #007bff;
     color: white;
@@ -97,9 +107,9 @@
     margin-left: 10px;
     cursor: pointer;
 }
-
-button:disabled {
+.footer button:disabled {
     background-color: rgba(0, 123, 255, 0.5);
+    opacity: 0.5;
 }
 
 #imgdots {
@@ -107,101 +117,3 @@ button:disabled {
     margin-left: 4px;
     width: 42px;
 }
-
-
-/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-
-* {
-    font-family: 'Noto Sans', sans-serif;
-    color-scheme: dark;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-
-.header {
-    box-shadow: 4px 4px 10px gray;
-    background-color: blue;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.main {
-    overflow-y: auto;
-    height: calc(100vh - 140px);
-    padding-top: 60px;
-    padding-bottom: 160px;
-}
-
-.chat-container {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    overflow-y: auto;
-    max-height: calc(100vh - 120px);
-    padding: 10px;
-}
-
-.message-left,
-.message-right {
-    text-align: left;
-    padding: 10px;
-    width: 60%;
-    margin: 14px;
-    border-radius: 15px;
-    background-color: rgb(66, 66, 66);
-    color: whitesmoke;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
-}
-
-.message-right {
-    text-align: right;
-    background-color: blue;
-    color: white;
-    margin-left: auto;
-}
-
-.footer {
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.footer input[type="text"] {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 5px;
-    max-width: 80%;
-    outline: none;
-    background-color: lightgray;
-    color: white;
-}
-
-.footer button {
-    background-color: blue;
-    width: 20%;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 8px;
-    margin-left: 5px;
-    cursor: pointer;
-}
-
-button:disabled {
-    background-color: rgba(0, 0, 255, 0.199);
-}
-
-#imgdots {
-    margin-left: 20px;
-    width: 42px;
-} */
