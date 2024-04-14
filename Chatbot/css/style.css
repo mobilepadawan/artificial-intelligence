@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('chats.css');
+@import url('fontclasses.css');
+
+body, html {
+  font-family: 'Roboto', sans-serif;
+  color-scheme: dark light;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed; 
+  top: 0; 
+  width: 100%;
+  background-color: #000;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & h1 {
+    margin: 0;
+    text-align: left;
+  }
+  
+  & img {
+    max-height: 100px;
+    max-width: 100%;
+    margin-right: 40px;
+  }
+}
