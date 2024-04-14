@@ -60,6 +60,7 @@ footer input[type="text"] {
     border: none;
     border-radius: 5px;
     margin-right: 10px;
+    outline: none;
 }
 
 footer button {
