@@ -87,7 +87,7 @@ function emulateResponse() {
             const randomResponse = getRandomResponse(arrayBot)
             Speakit.utteranceRate = 1.3
             Speakit.utterancePitch = 1.1
-            // Speakit.readText(randomResponse, "en-US", "Microsoft Ava Online (Natural) - English (United States)")
+            // Speakit.readText(randomResponse, "en-US", "Microsoft Ava Online (Natural) - English (United States)") 
             Speakit.readText(randomResponse, "en-US", "Microsoft Brian Online (Natural) - English (United States)")
             returnResponseChat(randomResponse, dotsId).then((response)=> {
                 chatArea.innerHTML += getDivSeparator(divId)
