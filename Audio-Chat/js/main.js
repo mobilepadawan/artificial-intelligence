@@ -41,7 +41,7 @@ function returnResponseChat(response, id) {
                 index++
             } else {
                 el.textContent += "\n"
-                el.innerHTML += `<p class="message-hour">${getHour()}</p>`
+                el.innerHTML += `<p class="message-hour">${()}</p>`
                 clearInterval(intervalId)
                 resolve("finish")
             }
@@ -85,7 +85,6 @@ function emulateResponse() {
         
         setTimeout(() => {
             const randomResponse = getRandomResponse(arrayBot)
-            // Speakit.readText(randomResponse, "en-US", "Microsoft Ava Online (Natural) - English (United States)")
             Speakit.utteranceRate = 1.3
             Speakit.utterancePitch = 1.1
             Speakit.readText(randomResponse, "en-US", "Microsoft Brian Online (Natural) - English (United States)")
