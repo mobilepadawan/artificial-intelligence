@@ -1,7 +1,13 @@
 window.speechRecognition = window.speechRecognition || window.webkitSpeechRecognition
 
 const recognition = new speechRecognition
+      
+
+      recognition.addEventListener("start", ()=> {
+        paragraphMessage.textContent = "✅ Voice recognition is ready to hear you."
+      })
       recognition.interimResults = true
+
       let p = document.createElement('p')
       recognition.addEventListener("result", (e)=> {
         const text = Array.from(e.results).map(result => result[0])
