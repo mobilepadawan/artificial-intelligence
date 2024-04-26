@@ -1,11 +1,16 @@
 window.speechRecognition = window.speechRecognition || window.webkitSpeechRecognition
 
-const recognition = new speechRecognition
+const recognition = new speechRecognition() || new webkitSpeechRecognition()
+console.log(recognition)
       
+      if (!recognition) {
+        console.error("Su sistema no permite usar Speech Recognition.")
+      }
 
-      recognition.addEventListener("start", ()=> {
-        paragraphMessage.textContent = "✅ Voice recognition is ready to hear you."
-      })
+      recognition.onstart = ()=> { paragraphMessage.textContent = "✅ Voice recognition is ready to hear you." }
+
+      // recognition.addEventListener("start", ()=> paragraphMessage.textContent = "✅ Voice recognition is ready to hear you.")
+
       recognition.interimResults = true
 
       let p = document.createElement('p')
