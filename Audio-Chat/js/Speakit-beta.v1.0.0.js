@@ -1,5 +1,5 @@
 class Speakit extends SpeechSynthesis {
-    static utteranceRate = 1.05
+    static utteranceRate = 1.02
     static utterancePitch = 1.0
     static totalAvailableVoices = 0
     static totalVoices = []
@@ -77,9 +77,11 @@ class Speakit extends SpeechSynthesis {
 
     static TTStest() {
         if (speechSynthesis) {
-            return "🟢 Your web browser has supporting for Text-To-Speech."
+            console.log("🟢 Your web browser has supporting for Text-To-Speech.")
+            return true
         } else {
-            return "🔴 Your web browser does not supports Text-To-Speech. Consider to use a Webkit or Blink (Chromium) based web browser."
+            console.log("🔴 Your web browser does not supports Text-To-Speech. Consider use a Webkit or Blink based web browser.")
+            return false
         }
     }
 
