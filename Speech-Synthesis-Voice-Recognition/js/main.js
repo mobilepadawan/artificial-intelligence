@@ -71,11 +71,10 @@ recognition.addEventListener("soundend",()=> {
 })
 
 recognition.addEventListener("result", (e)=> {
-    console.log(e.results[0])
-    console.log(e.results[0].transcript)
+    // console.log(e.results[0])
+    // console.log(e.results[0].transcript)
     const text = Array.from(e.results).map((result)=> result[0].transcript)
                                       .join('')
-                                      console.log(text)
 
     if (e.results[0].isFinal) {
         console.log(text)
