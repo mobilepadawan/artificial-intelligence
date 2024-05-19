@@ -15,3 +15,6 @@ This code is just for fun. In the coming weeks we will moving it to a serious we
 The animation integrated it works combining classic CSS animation properties over a DIV element and controlling the CSS animation start and end from JavaScript.
 
 This animation is integrated with the `soundstart` and `soundend` events propper of `SpeechRecognition` object.
+
+## Sounds
+The MP3 sound files added to this project are downloaded from a free resource mp3 sound centre. There is no any intention to comercialize with those sounds and the use of them are limited for non comercial software projects.
