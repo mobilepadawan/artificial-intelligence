@@ -84,20 +84,20 @@ recognition.addEventListener("result", (e)=> {
             Speakit.readText("I am JARVIS. A computer system developed by the best programmer ever: FERNANDO.", "en-GB")
         }
 
-        if (text.toLowerCase().includes("are you still working for tony")) {
+        if (text.toLowerCase().includes("are you still working for tony stark")) {
             Speakit.readText("Not now. I left my working position for the IRON MAN. I am a professional freelancer already.", "en-GB")
         }
 
         if (text.toLowerCase().includes("hello jarvis") ) {
-            Speakit.readText("Hello to you! What is your name?", "en-GB")
+            Speakit.readText("Hello to you! What's' your name?", "en-GB")
         }
 
-        if (text.toLowerCase().includes("my name is")) {
+        if (text.toLowerCase().includes("my name is") || text.toLowerCase().includes("i am") || text.toLowerCase().includes("i'm")) {
             let name = text.split(" ")
             Speakit.readText(`Hello, ${name[name.length - 1]}! Nice to meet you.`, "en-GB")
         }
 
-        if (text.toLowerCase().includes("open youtube")) {
+        if (text.toLowerCase().includes("open youtube please")) {
             Speakit.readText("Opening Youtube...", "en-GB")
             setTimeout(() => {
                 let anchor = document.createElement("a")
