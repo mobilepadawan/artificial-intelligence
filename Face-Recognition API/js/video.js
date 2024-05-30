@@ -24,9 +24,8 @@ async function onPlay() {
         await faceapi.draw.drawDetections(canvas, resizedResults)
         await faceapi.draw.drawFaceLandmarks(canvas, resizedResults)
         await faceapi.draw.drawFaceExpressions(canvas, resizedResults, 0.05)
-
 }
 
 video.addEventListener("play", async ()=> onPlay())
 
-setInterval(onPlay, 60)
+setInterval(onPlay, 1000)
