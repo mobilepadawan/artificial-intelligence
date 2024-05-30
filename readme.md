@@ -1,15 +1,22 @@
-# A.I. web applications
+# Recognition A.I.
 
-## Face-Recognition API
+This app use TensorFlow as a JavaScript library trained with the capacity to recognize different human expressions.
 
-This webapp uses the TensorFlow model to recognize faces and face expressions using a simple image picked up by your computer or mobile phone, also taking a pictura using the smartphone cam _(last feature is only for smartphones)_.
+* Pick a photo of your computer or mobile phone
+* Await a couple of seconds to finish the Analysis
 
-## Audio Chat app
+## Code written
+I used Vanilla JS to code the logic. Also the **face-api** library and some training files to train the TensorFlow lib previous to use the functions.
 
-This webapp is a simple chat app that interacts with a chatbot but also combines the power of speech synthesis, speech recognition and the ChatGPT API. This is built in a very alpha phase but I think it will be promising.
+## Improvements
+We adjust the Objects recognition A.I. through video updating the person sentiments shown on screen. This update was did it in the `face-api.min.js` file, changing the english sentiments to spanish sentiments.
 
-## Speech Recognition sample
+If you use the original face-api.js file, please download it from its official website: https://justadudewhohacks.github.io/face-api.js/docs/index.html 
 
-This webappp uses the native Voice recognition API to use the microphone of your webapp to listen to the user talk. the webapp will transcript in realtime all the audio listened by the microphone and show on the HTML document the transcripted text.
+## Future updates
 
-A software tool very easy to use. It's not a JS Library just a voice recognition using the JavaScript native API.
+[ ] Take a picture using a mobile phone and analyse it almost in real time.
+
+[ ] Streaming video from a webcam and realtime analyzing faces in the footage.
+
+After finish the mentioned tests this webapp will turn to a HR application where companies can automatically register the in and out of its employees.
