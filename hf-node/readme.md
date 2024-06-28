@@ -19,3 +19,9 @@ Create an account in https://huggingface.io/ and login into the platform. After 
 ### Installation
 
 This app is a node.js app and I will evolutionate in the near future, creating and endpoint for send texts and images for image captioning and text translation. Be patient, please.
+
+Install:
+* hugging face library from NPM
+* Dotenv for TOKEN keys purposes
+* Create a TOKEN in the Hugging Face website
+* Save the TOKEN in a .dotenv file with the key: `HFTOKEN`
