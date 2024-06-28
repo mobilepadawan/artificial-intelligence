@@ -2,7 +2,7 @@
 
 This is a very simple project where I'm using two models of AI taken from the Hugging Face website.
 
-## Translation
+## Translatation
 
 The first one is a model where I send a simple text message in `spanish` and the app return me the text translated to `english`. In this app I'm using `facebook/nllb-200-distilled-600M` model.
 
@@ -11,6 +11,12 @@ The results are good but not promising. Another models for translation should be
 ## Image description
 
 The other project is a model where I send an image and the model return me a captioned description of it. I use for this project the `Salesforce/blip-image-captioning-large` model.
+
+PS: any image start the result sentence with `a close up of `... I remove this using the `.replaceAll()` string JS method.
+
+```javascript
+console.log(result.generated_text.replaceAll("a close up of ", ""))
+```
 
 ### How to start
 
@@ -21,7 +27,8 @@ Create an account in https://huggingface.io/ and login into the platform. After 
 This app is a node.js app and I will evolutionate in the near future, creating and endpoint for send texts and images for image captioning and text translation. Be patient, please.
 
 Install:
+
 * hugging face library from NPM
 * Dotenv for TOKEN keys purposes
 * Create a TOKEN in the Hugging Face website
-* Save the TOKEN in a .dotenv file with the key: `HFTOKEN`
+* Save the TOKEN in a .dotenv file with the key: HFTOKEN
