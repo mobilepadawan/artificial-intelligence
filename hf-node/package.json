@@ -1,0 +1,23 @@
+{
+  "name": "hf-node",
+  "version": "1.0.0",
+  "description": "A project for testing hugging face using Node.js.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "testImageAnalysis": "node --watch index.js",
+    "testTranslationENES": "node --watch translate.js"
+  },
+  "keywords": [
+    "hugging",
+    "face",
+    "Artificial",
+    "Intelligence"
+  ],
+  "author": "Fernando O. Luna",
+  "license": "ISC",
+  "dependencies": {
+    "@huggingface/inference": "^2.7.0",
+    "dotenv": "^16.4.5"
+  }
+}
