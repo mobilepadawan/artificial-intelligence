@@ -2,7 +2,7 @@
 
 This is a very simple project where I'm using two models of AI taken from the Hugging Face website.
 
-## Translatation
+## Translation
 
 The first one is a model where I send a simple text message in `spanish` and the app return me the text translated to `english`. In this app I'm using `facebook/nllb-200-distilled-600M` model.
 
