@@ -1,8 +1,11 @@
 .chat-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     margin-top: 78px;
-    margin-bottom: 20px;
-    height: 100vh;
-    overflow-y: auto;
+    margin-bottom: 26px;
+    height: 90vh;
+    overflow-y: none;
     overflow-x: none;
     padding: 10px;
     background-color: #110f0f;
@@ -10,14 +13,15 @@
 
 .chat-bubble-space {
     width: 100%;
-    padding: 10px;
+    padding-bottom: 10px;
     height: 10px !important;
 }
 
 .chat-bubble-container {
-    padding: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     min-height: 46px;
-    width: 96%;
+    width: 100%;
 }
 
 .chat-bubble {
@@ -35,13 +39,15 @@
 .left {
     border-top-left-radius: 0;
     background-color: #0040ff;
-    float: left;
+    /* float: left; */
+    align-items: flex-start;
 }
 
 .right {
     border-bottom-right-radius: 0;
-    background-color: #009dff;
-    float: right;
+    background-color: #006bae;
+    /* float: right; */
+    align-items: flex-end;
 }
 
 footer {
