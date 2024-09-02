@@ -1,8 +1,5 @@
 // Modelos tomados desde: https://github.com/mlc-ai/web-llm/tree/main
-
-// https://github.com/mlc-ai/web-llm
 import { CreateMLCEngine } from 'https://esm.run/@mlc-ai/web-llm'
-// import marked from 'https://cdn.jsdelivr.net/npm/marked@14.1.0/+esm'
 
 // Speakit Config
 Speakit.utteranceRate = 1.1
@@ -26,10 +23,8 @@ const $info = dom('small')
 const $chatImage = '<img src="images/chatbot-32.png" alt="Chat icon" title="MoonGPT">'
 const $msgSend = 'audio/msg_send.mp3'
 const $msgRecv = 'audio/msg_recv.mp3'
-const messages = []
+const messages = [{ role: "system", content: "You are a helpful AI assistant that always response in spanish language."}]
 let end = false
-
-
 
 // A.I. CONFIG AND INITIALIZATION
 // const AI_MODEL = 'gemma-2b-it-q4f32_1-MLC'
@@ -62,7 +57,8 @@ $form.addEventListener('submit', async (e)=> {
     $button.setAttribute('disabled', '')
 
     const reply = await ENGINE.chat.completions.create({
-        messages
+        messages,
+        temperature: 1
     })
     const botMessage = reply.choices[0].message.content
     addMessage(botMessage, 'bot')
