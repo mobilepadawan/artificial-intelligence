@@ -6,12 +6,12 @@ Speakit.utteranceRate = 1.1
 Speakit.utterancePitch = 1.1
 Speakit.languageFilter = 'es-AR'
 Speakit.getVoices().then((voices)=> console.table(voices))
- 
+
 function speakAnswer(text) {
     Speakit.readText(text, "es-AR", "Microsoft Tomas Online (Natural) - Spanish (Argentina)")
 }
 
-const dom = el=> document.querySelector(el)
+const dom = (element)=> document.querySelector(element)
 
 const $form = dom('form')
 const $input = dom('form input')
@@ -23,7 +23,7 @@ const $info = dom('small')
 const $chatImage = '<img src="images/chatbot-32.png" alt="Chat icon" title="MoonGPT">'
 const $msgSend = 'audio/msg_send.mp3'
 const $msgRecv = 'audio/msg_recv.mp3'
-const messages = [{ role: "system", content: "You are a helpful AI assistant that always response in spanish language."}]
+const messages = [{ role: "system", content: "You are a brief and helpful AI assistant."}]
 let end = false
 
 // A.I. CONFIG AND INITIALIZATION
@@ -32,7 +32,7 @@ let end = false
 // const AI_MODEL = 'TinyLlama-1.1B-Chat-v0.4-q4f16_1-MLC'
 const AI_MODEL = 'Phi-3.5-mini-instruct-q4f16_1-MLC'
 
-const ENGINE = await CreateMLCEngine( AI_MODEL, 
+const ENGINE = await CreateMLCEngine( AI_MODEL,
                                       { initProgressCallback: 
                                         (info)=> {
                                             $info.textContent = info.text
@@ -49,6 +49,7 @@ const ENGINE = await CreateMLCEngine( AI_MODEL,
 $form.addEventListener('submit', async (e)=> {
     e.preventDefault()
     const textMessage = $input.value.trim()
+    // { role: 'system', content: 'You are a brief and helpful AI assistant.' },
     const userMessage = { role: 'user', content: textMessage }
 
     messages.push(userMessage)
@@ -58,9 +59,10 @@ $form.addEventListener('submit', async (e)=> {
 
     const reply = await ENGINE.chat.completions.create({
         messages,
-        temperature: 1
+        temperature: 0.7
     })
     const botMessage = reply.choices[0].message.content
+    console.log(reply.usage)
     addMessage(botMessage, 'bot')
     speakAnswer(botMessage)
     $button.removeAttribute('disabled')
