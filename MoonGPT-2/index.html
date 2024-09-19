@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Interfaz de Chat</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/chatbot-32.png" type="image/png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <select id="language-select">
+            <option selected disabled>Selecciona un Modelo...</option>
+        </select>
+        <h1>M🌔🌔nGPT</h1>
+        <span id="settings-icon">⚙️</span>
+    </header>
+    <main>
+        <div class="chat-container">
+            <!-- <div class="chat-message user">
+                <div class="chat-bubble">
+                    <p>¿Cuál es el propósito de la vida?</p>
+                </div>
+            </div>
+
+            <div class="chat-message assistant">
+                <div class="chat-bubble">
+                    <p>El propósito de la vida es encontrar significado y felicidad en lo que haces.</p>
+                </div>
+            </div> -->
+        </div>
+    </main>
+    <footer>
+        <form method="POST">
+            <textarea id="chat-input" placeholder="Escribe tu pregunta aquí..."></textarea>
+            <button id="send-button">➣</button>
+        </form>
+    </footer>
+</body>
+</html>
