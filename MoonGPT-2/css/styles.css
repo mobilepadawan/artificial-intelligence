@@ -79,7 +79,7 @@ main {
     color: black;
     font-weight: 400;
     margin-bottom: 10px;
-    overflow-x: scroll;
+    /* overflow-x: scroll; */
 }
 
 .chat-message.user {
@@ -102,6 +102,14 @@ main {
     & p {
         text-wrap: pretty;
     }
+
+    & pre {
+        font-size: .8rem;
+        padding: 6px;
+        background-color: black;
+        color: rgb(255, 255, 193);
+        overflow-x: scroll;
+    }
 }
 
 .chat-message.user .chat-bubble {
@@ -114,13 +122,6 @@ main {
     border-top-left-radius: 0px;
     background-color: #d0e6ff;
     text-align: left;
-
-    /* & pre {
-        overflow-x: scroll;
-        max-width: 600px;
-        background: black;
-        color: rgb(255, 249, 186);
-    } */
 }
 
 form {
