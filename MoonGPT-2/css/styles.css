@@ -1,5 +1,4 @@
 * {
-    user-select: none;
     color-scheme: dark;
 }
 
@@ -18,6 +17,7 @@ header {
     align-items: center;
     padding: 10px 20px;
     border-bottom: 1px solid #ddd;
+    user-select: none;
 }
 
 header h1 {
@@ -42,7 +42,6 @@ header h1 {
     cursor: pointer;
     font-size: 1.5em;
     transition: transform .25s ease;
-    
 }
 
 #settings-icon:hover {
@@ -61,6 +60,7 @@ main {
     padding: 20px;
     overflow-y: auto;
     background-color: black;
+    user-select: text;
 }
 
 .chat-container {
@@ -72,6 +72,7 @@ main {
     box-sizing: border-box;
     scroll-behavior: smooth;
     background-color: black;
+    scroll-behavior: smooth;
 }
 
 .chat-message {
@@ -79,7 +80,6 @@ main {
     color: black;
     font-weight: 400;
     margin-bottom: 10px;
-    /* overflow-x: scroll; */
 }
 
 .chat-message.user {
@@ -130,6 +130,7 @@ form {
     justify-content: center;
     overflow-y: 0;
     padding: 10px 20px;
+    user-select: none;
 }
 
 #chat-input {
