@@ -1,10 +1,25 @@
 import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai"
 
-const GOOGLE_API_KEY=''
+function getGeminiAPIKey() {
+    const savedSettings = JSON.parse(localStorage.getItem('MoonGPTSettings'))
+
+    if (!savedSettings?.GeminiAPIKey) {
+        console.error('Configura la API Key de Gemini para continuar.')
+        return ''
+    } else {
+        return savedSettings.GeminiAPIKey
+    }
+}
+
+const GOOGLE_API_KEY = getGeminiAPIKey()
 
 export async function getAnswerFromGemini(question) {
     if (!question) {
         throw new Error('No se ha recibido un parámetro de consulta.')
+    }
+
+    if (!GOOGLE_API_KEY) {
+        throw new Error('Configura una API Key válida para utilizar esta aplicación.')
     }
 
     const genAI = new GoogleGenerativeAI(GOOGLE_API_KEY)

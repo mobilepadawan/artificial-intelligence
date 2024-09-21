@@ -10,27 +10,42 @@
 </head>
 <body>
     <header>
-        <select id="language-select">
-            <option selected disabled>Selecciona un Modelo...</option>
-        </select>
         <h1>M🌔🌔nGPT</h1>
         <span id="settings-icon">⚙️</span>
     </header>
     <main>
         <div class="chat-container">
-            <!-- <div class="chat-message user">
-                <div class="chat-bubble">
-                    <p>¿Cuál es el propósito de la vida?</p>
-                </div>
-            </div>
 
-            <div class="chat-message assistant">
-                <div class="chat-bubble">
-                    <p>El propósito de la vida es encontrar significado y felicidad en lo que haces.</p>
-                </div>
-            </div> -->
         </div>
     </main>
+    
+    <dialog>
+        <article>
+            <h2>Settings</h2>
+            <p>Configura desde aquí tus preferencias en M🌔🌔nGPT.</p>
+            <hr>
+            <h3>Modelo predeterminado</h3>
+            <label for="select">
+                Selecciona el Modelo de I.A. predeterminado:
+            </label>
+            <select id="language-select">
+                <option selected disabled>Ninguno</option>
+            </select>
+            <hr>
+            <h3>Agrega la Clave de tu(s) Modelo(s):</h3>
+            <label for="txtOpenAIAPIKey"> Clave de Open AI:
+                <input type="text" id="txtOpenAIAPIKey" placeholder="OpenAI API key...">
+            </label>
+            <br>
+            <label for="txtGeminiAPIKey"> Clave de Gemini:
+                <input type="text" id="txtGeminiAPIKey" placeholder="Gemini API key...">
+            </label>
+            <hr>
+            <button id="btnSave">Guardar</button>
+            <button id="btnCancel">Cancelar</button>    
+        </article>
+    </dialog>
+    
     <footer>
         <form method="POST">
             <textarea id="chat-input" placeholder="Escribe tu pregunta aquí..."></textarea>
