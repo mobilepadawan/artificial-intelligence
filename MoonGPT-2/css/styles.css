@@ -159,7 +159,7 @@ dialog::backdrop {
     display: flex;
     color: black;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .chat-message.user {
