@@ -11,9 +11,10 @@ function getGeminiAPIKey() {
     }
 }
 
-const GOOGLE_API_KEY = getGeminiAPIKey()
+export async function getAnswerFromGemini(question, settings) {
+    
+    const GOOGLE_API_KEY = settings?.GeminiAPIKey || ''
 
-export async function getAnswerFromGemini(question) {
     if (!question) {
         throw new Error('No se ha recibido un parámetro de consulta.')
     }

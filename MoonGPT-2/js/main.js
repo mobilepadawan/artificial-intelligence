@@ -8,6 +8,7 @@ import { marked } from 'https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js'
 const dialog = D('dialog')
 const btnSave = D('button#btnSave')
 const btnCancel = D('button#btnCancel')
+const btnSend = D('button#send-button')
 const txtGeminiAPIKey = D('input#txtGeminiAPIKey')
 const txtOpenAIAPIKey = D('input#txtOpenAIAPIKey')
 const languageSelect = D('select#language-select')
@@ -89,7 +90,7 @@ formQuestion.addEventListener('submit', async (e)=> {
             textArea.value = ''
 
             if (settings.selectedModel === 'Gemini') {
-                const response = await getAnswerFromGemini(question)
+                const response = await getAnswerFromGemini(question, settings)
                 const answer = marked.parse(response)
                 chatContainer.innerHTML += returnChatMessageAssistant(answer)
                 playAudioFile('audio/msg_recv.mp3')
@@ -133,7 +134,7 @@ btnSave.addEventListener('click', ()=> {
         settings.GeminiAPIKey = txtGeminiAPIKey.value.trim()    
     }
 
-    if (txtGeminiAPIKey.value.trim() !== '') {
+    if (txtOpenAIAPIKey.value.trim() !== '') {
         settings.OpenAIAPIKey = txtOpenAIAPIKey.value.trim()
     }
 
@@ -141,8 +142,13 @@ btnSave.addEventListener('click', ()=> {
         settings.selectedModel = languageSelect.value
     }
 
-    localStorage.setItem('MoonGPTSettings', JSON.stringify(settings))
-    btnCancel.click()
+    if (settings.selectedModel && (settings.GeminiAPIKey || settings.OpenAIAPIKey)) {
+        localStorage.setItem('MoonGPTSettings', JSON.stringify(settings))
+        btnSend.disabled = false
+        console.table(settings)
+        console.log(btnSend.disabled)
+    }
+    dialog.close()
 })
 
 btnCancel.addEventListener('click', ()=> dialog.close())
