@@ -256,3 +256,10 @@ form {
 #send-button:active {
     transform: scale(.96);
 }
+
+#send-button:disabled {
+    cursor: not-allowed;
+    background-color:grey;
+    color: darkslategray;
+    transform: none;
+}
