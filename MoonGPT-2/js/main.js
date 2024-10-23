@@ -130,23 +130,13 @@ languageSelect.addEventListener('change', ()=> {
 })
 
 btnSave.addEventListener('click', ()=> {
-    if (txtGeminiAPIKey.value.trim() !== '') {
-        settings.GeminiAPIKey = txtGeminiAPIKey.value.trim()    
-    }
-
-    if (txtOpenAIAPIKey.value.trim() !== '') {
-        settings.OpenAIAPIKey = txtOpenAIAPIKey.value.trim()
-    }
-
-    if (languageSelect.value !== 'Ninguno') {
-        settings.selectedModel = languageSelect.value
-    }
+    if (txtGeminiAPIKey.value.trim() !== '') settings.GeminiAPIKey = txtGeminiAPIKey.value.trim()    
+    if (txtOpenAIAPIKey.value.trim() !== '') settings.OpenAIAPIKey = txtOpenAIAPIKey.value.trim()
+    if (languageSelect.value !== 'Ninguno') settings.selectedModel = languageSelect.value
 
     if (settings.selectedModel && (settings.GeminiAPIKey || settings.OpenAIAPIKey)) {
         localStorage.setItem('MoonGPTSettings', JSON.stringify(settings))
         btnSend.disabled = false
-        console.table(settings)
-        console.log(btnSend.disabled)
     }
     dialog.close()
 })
